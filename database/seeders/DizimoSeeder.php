@@ -2,17 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Membro;
+use App\Models\Dizimo;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class MembroSeeder extends Seeder
+class DizimoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Membro::factory(3520)->create();
+        Dizimo::factory(2000)->create();
     }
 }

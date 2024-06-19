@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call(EstadoCivilSeeder::class);
         $this->call(MetodoPagamentoSeeder::class);
         $this->call(MembroSeeder::class);
+        $this->call(DizimoSeeder::class);
     }
 }

@@ -58,7 +58,7 @@
       </nav>
         <span class="m-5">
         </span>
-        <a href="/membro/login" class="btn-link color-primary">Entrar</a>
+        <a href="/secretariado/login" class="btn-link color-primary">Entrar</a>
 
         <a class="btn-getstarted" href="/membro/register">Criar um conta</a>
     </div>
@@ -75,7 +75,7 @@
             <h1>Bem-vindo à Igreja Jeova Shallon</h1>
             <p>Somos uma família espiritual diversa e inclusiva, onde cada pessoa é valorizada e incentivada a crescer em sua fé.</p>
             <div class="d-flex">
-              <a href="/membro/register" class="btn-get-started">Encontrar nossa igreja</a>
+              <a href="/secretariado/register" class="btn-get-started">Encontrar nossa igreja</a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img">

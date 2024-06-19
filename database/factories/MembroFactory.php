@@ -54,6 +54,7 @@ class MembroFactory extends Factory
             'data_conversao' => fake()->address(),
             'estado_civil_id' => EstadoCivil::all()->random()->id,
             'genero_id' => Genero::all()->random()->id,
+            'created_at' => fake()->dateTimeBetween($startDate = '-1 year', $endDate = 'now', $timezone = null),
         ];
     }
 }

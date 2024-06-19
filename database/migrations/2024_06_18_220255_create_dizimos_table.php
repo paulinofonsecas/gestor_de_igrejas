@@ -9,11 +9,6 @@ return new class extends Migration
     /**
      * Run the migrations.
      *
-     * "membro_id" => "4"
-  "data" => "2000-12-04"
-  "valor" => "254632"
-  "metodo_pagamento_id" => "1"
-  "descricao" => "Teset"
      */
     public function up(): void
     {

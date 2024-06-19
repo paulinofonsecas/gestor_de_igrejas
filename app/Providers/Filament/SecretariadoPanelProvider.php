@@ -2,6 +2,8 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Secretariado\Resources\MembroResource\Widgets\DimosDoMesChart;
+use App\Filament\Secretariado\Resources\MembroResource\Widgets\MembrosAtivosChart;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -17,6 +19,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
 
 class SecretariadoPanelProvider extends PanelProvider
 {
@@ -36,8 +39,8 @@ class SecretariadoPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Secretariado/Widgets'), for: 'App\\Filament\\Secretariado\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                DimosDoMesChart::class,
+                MembrosAtivosChart::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -52,6 +55,9 @@ class SecretariadoPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->plugins([
+                FilamentApexChartsPlugin::make()
             ]);
     }
 }

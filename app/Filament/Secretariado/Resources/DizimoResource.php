@@ -51,12 +51,15 @@ class DizimoResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('membro.nome')
                     ->numeric()
+                    ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('valor')
                     ->numeric()
+                    ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('data')
                     ->date()
+                    ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('metodoPagamento.desc')
                     ->badge()
